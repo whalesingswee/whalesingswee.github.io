@@ -1,0 +1,53 @@
+.post .project-box {
+	ul {
+		padding: 0;
+		margin: 0;
+		display: flex;
+		line-height: 100%;
+	}
+
+	li {
+		margin: 0;
+		padding: 0 10px;
+		list-style: none;
+		width: 33.33%;
+		line-height: 100%;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+
+		img {
+			margin: 0;
+			border-radius: 4px 4px 0 0;
+			display: block;
+		}
+	}
+
+	.project-box__info {
+		line-height: 100%;
+		background: #efefef;
+		display: flex;
+		box-sizing: border-box;
+		
+		h5 {
+			margin: 0;
+			padding: 10px;
+			flex: 1 0 70%;
+		}
+	}
+
+	.project-box__link {
+		padding: 10px;
+		flex: 100 0 10%;
+		text-align: center;
+		background: #2E978E;
+		color: white;
+		transition: background 0.25s;
+		&:hover {
+			background: darken(#2E978E, 10%);
+		}
+	}
+}

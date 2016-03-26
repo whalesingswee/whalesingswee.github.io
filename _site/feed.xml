@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>whalesingswee.co</title>
+		<description>A personal blog about web design, web frontend development, apple apps, and more.</description>
+		<link>/</link>
+		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+		<pubDate>Sat, 26 Mar 2016 14:40:43 +0800</pubDate>
+		<lastBuildDate>Sat, 26 Mar 2016 14:40:43 +0800</lastBuildDate>
+		<generator>Jekyll v3.0.3</generator>
+		
+			<item>
+				<title>如何砍掉 NodeJS Error: listen EADDRINUSE 的問題</title>
+				<description>&lt;p&gt;有些時候跑太多 node 的東西的時候都會遇到 Error: listen EADDRINUSE 的問題，不清楚怎麼解覺得朋友覺得很困擾，到底是哪個 address 被用掉了？&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;有些時候跑太多 node 的東西的時候都會遇到 Error: listen EADDRINUSE 的問題，這時候可以用這方式：&lt;/p&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-linenos&quot; data-lang=&quot;linenos&quot;&gt;# 假設 1234 是 port 的號碼
+lsof -i tcp: 1234&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+	&lt;div class=&quot;reference&quot;&gt;
+		&lt;strong&gt;備註&lt;/strong&gt;
+		&lt;p&gt;# 是 shell 裡面的 comment，不要加進去喔&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;之後會顯示你的 PID 多少，例如 &lt;code class=&quot;highlighter-rouge&quot;&gt;27373&lt;/code&gt;，然後使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;kill -9 27373&lt;/code&gt; 就砍掉囉！非常好用！&lt;/p&gt;
+</description>
+				<pubDate>Mon, 14 Mar 2016 12:07:49 +0800</pubDate>
+				<link>/frontend/development/2016/03/14/nodejs-error-listen-eaddrinuse/</link>
+				<guid isPermaLink="true">/frontend/development/2016/03/14/nodejs-error-listen-eaddrinuse/</guid>
+				
+				
+					<category>Frontend</category>
+				
+					<category>Development</category>
+				
+			</item>
+		
+			<item>
+				<title>什麼是 Content First</title>
+				<description>&lt;p&gt;我們的網頁以前都是以設計取決于內容的, 大家都只要炫！酷！人家就會覺得他是好網站了嗎？ 不是。沒有好的資訊跟內容，文案等，是無法設計出好的網站。但很多網站都往往忽略了這一點，甚至沒考慮到這些東西已經嚴重影響到整個網站的UX。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;content-first-mobile-first&quot;&gt;大家都在喊”CONTENT FIRST”! “MOBILE FIRST”?&lt;/h2&gt;
+
+&lt;p&gt;我們的網頁以前都是以設計取決于內容的, 大家都只要炫！酷！人家就會覺得他是好網站了嗎？ 不是。
+沒有好的資訊跟內容，文案等，是無法設計出好的網站。 但很多網站都往往忽略了這一點，甚至沒考慮到這些東西已經嚴重影響到整個網站的UX。
+在設計的過程中，以下幾點是可以考慮的：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;網頁的主要目的就是帶領使用者找到正確的資訊&lt;/li&gt;
+  &lt;li&gt;使用者如果找不到想要的資訊，你的網站大致上是失敗的&lt;/li&gt;
+  &lt;li&gt;目前的內容不等於以後的內容&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不管有沒有後台，我們都應該使用內容去考慮使用正確排版方式。
+該用table時就用table，該用list時就使用list，需要用tab時就應該用tab。
+技術做的到的東西不代表我們需要一直用到它，例如說頁面上根本就不需要拖拉的功能, 可是客戶可能會覺得這個很炫很方便, 就加上去了, 實際上這可能跟不需要用到, 多加了反而更加複雜, 這是個不好的示範。
+內容造就設計，網頁不是藝術&lt;/p&gt;
+
+&lt;p&gt;試想一下，沒有正確的內容，我們該如何打造出網頁的整體風格跟架構？不可以因為客戶說喜歡鄉村風，就整個設計為鄉村風，如果資訊根本就不適合，那到時我們設計的鄉村風其實不會很美觀，網站的整體方向也會跟原本的走偏了許多。 要記得沒有內容的設計其實只是裝飾，沒有意義的設計只是藝術。
+RESPONSIVE DESIGN (響應式設計)&lt;/p&gt;
+
+&lt;p&gt;千萬不要有”最佳瀏覽經驗” – 都什麼時代了 –沒錯，我正在說IE版本。 因為Responsive Web Design的關係，每個裝置都得以透過同一個網站接收同樣的資訊，但正因為每個裝置都不一樣，我們更應該注重內容的顯示，適當的裝置就應該出現適當的內容，要想像，我們目前活在2014的年代，是個網路的時代，每個人都幾乎有一台平板或智慧型手機，網頁不再是電腦專屬的了。
+設計應該是以使用者優先, 手機優先, 資訊優先&lt;/p&gt;
+
+&lt;p&gt;以台灣目前的產業，我們有辦法做到以上的解決方式嗎？
+決定就在我們設計者的手中，正因為有這些正確的方式跟觀念，我們更需要來教導我們的客戶正確的設計方向。&lt;/p&gt;
+</description>
+				<pubDate>Sat, 12 Apr 2014 22:21:00 +0800</pubDate>
+				<link>/frontend/development/2014/04/12/what-is-content-first/</link>
+				<guid isPermaLink="true">/frontend/development/2014/04/12/what-is-content-first/</guid>
+				
+				
+					<category>Frontend</category>
+				
+					<category>Development</category>
+				
+			</item>
+		
+	</channel>
+</rss>

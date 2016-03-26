@@ -1,0 +1,12 @@
+<header class="title">
+	<a href="{{ site.baseurl }}"><img src="{{ site.mascot_logourl | prepend: site.baseurl }}" /></a>
+</header>
+
+<nav class="wrapper {% if page.featured == true %} featured {% endif %} {% if site.theme_always_show_nav == true %} alwaysshow {% endif %}">
+	<ul>
+		<li><a href="{{ site.url | prepend: site.baseurl }}/">首頁</a></li>
+		<li><a href="{{ site.url | prepend: site.baseurl }}/about">關於我</a></li>
+		<li><a href="{{ site.url | prepend: site.baseurl }}/blog">部落格</a></li>
+		<li><a href="{{ site.url | prepend: site.baseurl }}/hire-me">Hire Me</a></li>
+	</ul>
+</nav>

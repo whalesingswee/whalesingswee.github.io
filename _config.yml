@@ -1,0 +1,52 @@
+# External Gems
+gems: [jekyll-paginate]
+
+
+# Site Settings
+title: "whalesingswee.co"
+email: "hsiang@whalesinswee.co"
+description: "A personal blog about web design, web frontend development, apple apps, and more."
+baseurl: ""
+logourl: "/assets/img/bloglogo.png"
+mascot_logourl: "/assets/img/mascotlogo.svg"
+fa-logo: "fa-bookmark-o"
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Author Settings
+author_name: "Hsiang Lee"
+author_url: "http://whalesingswee.co"
+author_bio: "Hsiang 是個蘋果愛好者，同時也是網頁設計以及前端工程師。平時愛上上網，有資訊焦慮症，愛玩爐石戰記，PS4 的遊戲等。"
+author_email: "hsiang@whalesingswee.co"
+author_image: "/assets/img/bloglogo.png"
+
+
+# Social Settings
+twitter_url: "https://twitter.com/whalesingswee"
+facebook_url: "http://facebook.com/hsianglee"
+github_url: "http://github.com/whalesingswee"
+codepen_url: "http://codepen.io/whalesingswee/"
+stackoverflow_url: "http://stackoverflow.com/users/2147483/draftdraft88"
+linkedin_url: "https://tw.linkedin.com/in/hsianglee"
+
+
+# Theme Settings
+theme_disqus_shortname: "whalesingswee"
+theme_google_comments: false
+theme_analytics_id: ""
+theme_reading_time: true
+theme_autoload_comments: false
+theme_always_show_nav: false
+
+
+# SASS Settings
+# DO NOT MODIFY
+sass:
+ sass_dir: "assets/css/"
+ style: :compressed
+
+
+# Build Settings
+markdown: kramdown
+permalink: pretty
+

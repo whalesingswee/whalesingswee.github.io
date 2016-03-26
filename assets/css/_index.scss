@@ -1,0 +1,42 @@
+/*
+	INDEX STYLES
+*/
+
+.index {
+	display: none;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	padding: 20px 0 20px;
+	margin: 0;
+	color: #ececf1;
+	background-color: #EE802F;
+
+	h1, h2 {
+		margin: 0;
+		padding: 0;
+		font: 700 18px 'Open Sans', Serif;
+		color: #fff;
+	}
+
+	h2 {
+		font: 600 18px 'Open Sans', Serif;
+		font-weight: 400;
+	}
+
+	.show {
+		display: block;
+	}
+
+	@media screen and (max-width: 790px) {
+		h1 {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 675px) {
+		display: none !important;
+	}
+}
