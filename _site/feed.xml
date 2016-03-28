@@ -5,9 +5,43 @@
 		<description>A personal blog about web design, web frontend development, apple apps, and more.</description>
 		<link>/</link>
 		<atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-		<pubDate>Sat, 26 Mar 2016 20:55:52 +0800</pubDate>
-		<lastBuildDate>Sat, 26 Mar 2016 20:55:52 +0800</lastBuildDate>
+		<pubDate>Mon, 28 Mar 2016 22:32:54 +0800</pubDate>
+		<lastBuildDate>Mon, 28 Mar 2016 22:32:54 +0800</lastBuildDate>
 		<generator>Jekyll v3.0.3</generator>
+		
+			<item>
+				<title>簡易 React Router 跟 Transition 的學習筆記</title>
+				<description>&lt;p&gt;以前在看 React 的時候覺得 Routing 應該很難，一直讓我覺得很困擾，雖然本身沒有用過 Angular，但感覺就是有點艱難。&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;今天學會了如何使用 React 換頁面，加上簡單的 Fade In/Out 效果。&lt;/p&gt;
+
+&lt;h4 id=&quot;demo&quot;&gt;Demo&lt;/h4&gt;
+&lt;p data-height=&quot;435&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;JXJBvM&quot; data-default-tab=&quot;result&quot; data-user=&quot;whalesingswee&quot; class=&quot;codepen&quot;&gt;See the Pen &lt;a href=&quot;http://codepen.io/whalesingswee/pen/JXJBvM/&quot;&gt;React Router with Transition&lt;/a&gt; by Hsiang Lee (&lt;a href=&quot;http://codepen.io/whalesingswee&quot;&gt;@whalesingswee&lt;/a&gt;) on &lt;a href=&quot;http://codepen.io&quot;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async=&quot;&quot; src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;
+
+&lt;h4 id=&quot;section&quot;&gt;學習筆記&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;v0.13 跟 v1 的 Router 使用方式不一樣&lt;/li&gt;
+  &lt;li&gt;Router 是使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;component&lt;/code&gt; 不再用 &lt;code class=&quot;highlighter-rouge&quot;&gt;handler&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cloneWithProps&lt;/code&gt; 已不使用，換成 &lt;code class=&quot;highlighter-rouge&quot;&gt;cloneElements&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;transition 若沒有改變的話原因是因為要 &lt;code class=&quot;highlighter-rouge&quot;&gt;key: this.props.location.pathname&lt;/code&gt; 要更新，不止 &lt;code class=&quot;highlighter-rouge&quot;&gt;this.props.children&lt;/code&gt;，更多參考&lt;a href=&quot;https://facebook.github.io/react/docs/top-level-api.html#react.cloneelement&quot;&gt;這個連結&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+				<pubDate>Mon, 14 Mar 2016 12:07:49 +0800</pubDate>
+				<link>/frontend/development/2016/03/14/react-router-with-transition/</link>
+				<guid isPermaLink="true">/frontend/development/2016/03/14/react-router-with-transition/</guid>
+				
+				
+					<category>Frontend</category>
+				
+					<category>Development</category>
+				
+			</item>
 		
 			<item>
 				<title>如何砍掉 NodeJS Error: listen EADDRINUSE 的問題</title>

@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-	<title>Blog</title>
+	<title>簡易 React Router 跟 Transition 的學習筆記</title>
 	<meta name="description" content="A personal blog about web design, web frontend development, apple apps, and more." />
 
 	<meta name="HandheldFriendly" content="True" />
@@ -14,7 +14,7 @@
 	<link rel="alternate" type="application/rss+xml" href="/feed.xml">
 	<link rel="shortcut icon" href="/favicon.ico">
 	<link rel="prefetch" href="">
-	<link rel="canonical" href="/blog/">
+	<link rel="canonical" href="/frontend/development/2016/03/14/react-router-with-transition/">
 
 	<link rel="stylesheet" href="/assets/css/screen.css">
 	<link href='//fonts.googleapis.com/css?family=Domine:700|Open+Sans:400,600|Source+Code+Pro:500' rel='stylesheet' type='text/css'>
@@ -35,7 +35,14 @@
 	</ul>
 </nav>
 
-	<div class="profile ">
+	<div class="index">
+	<div class="wrapper">
+		<h1 class="right">簡易 React Router 跟 Transition 的學習筆記</h1>
+		<h2 class="left">Introduction</h2>
+	</div>
+</div>
+
+<div class="profile ">
 	<img src="/assets/img/bloglogo.png" class="profileimage" alt="user">
 	<h4>Hsiang Lee</h4>
 	<ul>
@@ -50,88 +57,79 @@
 	<hr>
 </div>
 
-<section class="posts postindex wrapper">
-	
-	
+
+
+<section class="posts wrapper">
 	<article class="post ">
+		
 		<header>
 			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
 			<h2>
 				
-					Frontend 
+				Frontend 
 				
-					Development 
-				
-			</h2>
-			<h1><a href="/frontend/development/2016/03/14/react-router-with-transition/">簡易 React Router 跟 Transition 的學習筆記</a></h1>
-			<span>
-				Posted on <i class="fa fa-clock-o"></i><time datetime="2016-03-14">March 14, 2016</time>.
-			</span>
-			<div class="excerpt">
-				
-					<p>以前在看 React 的時候覺得 Routing 應該很難，一直讓我覺得很困擾，雖然本身沒有用過 Angular，但感覺就是有點艱難。</p>
-
-
-				
-			</div>
-		</header>
-	</article>
-	
-	<article class="post ">
-		<header>
-			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
-			<h2>
-				
-					Frontend 
-				
-					Development 
+				Development 
 				
 			</h2>
-			<h1><a href="/frontend/development/2016/03/14/nodejs-error-listen-eaddrinuse/">如何砍掉 NodeJS Error: listen EADDRINUSE 的問題</a></h1>
+			<h1 id="posttitle">簡易 React Router 跟 Transition 的學習筆記</h1>
 			<span>
-				Posted on <i class="fa fa-clock-o"></i><time datetime="2016-03-14">March 14, 2016</time>.
+				Posted on <i class="fa fa-clock-o"></i> <time datetime="2016-03-14">March 14, 2016</time>.
 			</span>
-			<div class="excerpt">
-				
-					<p>有些時候跑太多 node 的東西的時候都會遇到 Error: listen EADDRINUSE 的問題，不清楚怎麼解覺得朋友覺得很困擾，到底是哪個 address 被用掉了？</p>
-
-
-				
-			</div>
 		</header>
-	</article>
-	
-	<article class="post ">
-		<header>
-			<div class="feature"><span>Featured</span><i class="fa fa-bookmark fa-lg"></i></div>
-			<h2>
-				
-					Frontend 
-				
-					Development 
-				
-			</h2>
-			<h1><a href="/frontend/development/2014/04/12/what-is-content-first/">什麼是 Content First</a></h1>
-			<span>
-				Posted on <i class="fa fa-clock-o"></i><time datetime="2014-04-12">April 12, 2014</time>.
-			</span>
-			<div class="excerpt">
-				
-					<p>我們的網頁以前都是以設計取決于內容的, 大家都只要炫！酷！人家就會覺得他是好網站了嗎？ 不是。沒有好的資訊跟內容，文案等，是無法設計出好的網站。但很多網站都往往忽略了這一點，甚至沒考慮到這些東西已經嚴重影響到整個網站的UX。</p>
 
+		<section class="postbody">
+			<p>以前在看 React 的時候覺得 Routing 應該很難，一直讓我覺得很困擾，雖然本身沒有用過 Angular，但感覺就是有點艱難。</p>
 
-				
+<!--more-->
+
+<h2 id="solution">Solution</h2>
+
+<p>今天學會了如何使用 React 換頁面，加上簡單的 Fade In/Out 效果。</p>
+
+<h4 id="demo">Demo</h4>
+<p data-height="435" data-theme-id="0" data-slug-hash="JXJBvM" data-default-tab="result" data-user="whalesingswee" class="codepen">See the Pen <a href="http://codepen.io/whalesingswee/pen/JXJBvM/">React Router with Transition</a> by Hsiang Lee (<a href="http://codepen.io/whalesingswee">@whalesingswee</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async="" src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h4 id="section">學習筆記</h4>
+
+<ul>
+  <li>v0.13 跟 v1 的 Router 使用方式不一樣</li>
+  <li>Router 是使用 <code class="highlighter-rouge">component</code> 不再用 <code class="highlighter-rouge">handler</code></li>
+  <li><code class="highlighter-rouge">cloneWithProps</code> 已不使用，換成 <code class="highlighter-rouge">cloneElements</code></li>
+  <li>transition 若沒有改變的話原因是因為要 <code class="highlighter-rouge">key: this.props.location.pathname</code> 要更新，不止 <code class="highlighter-rouge">this.props.children</code>，更多參考<a href="https://facebook.github.io/react/docs/top-level-api.html#react.cloneelement">這個連結</a>。</li>
+</ul>
+
+		</section>
+
+		<div class="postprofile">
+			<img src="/assets/img/bloglogo.png" class="author" alt="user">
+			<div class="info">
+				<h4>Hsiang Lee</h4>
+				<a href="http://whalesingswee.co">http://whalesingswee.co</a>
+				<p>Hsiang 是個蘋果愛好者，同時也是網頁設計以及前端工程師。平時愛上上網，有資訊焦慮症，愛玩爐石戰記，PS4 的遊戲等。</p>
+				<ul class="social">
+					<li><a href="https://twitter.com/whalesingswee" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="http://facebook.com/hsianglee" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="http://github.com/whalesingswee" class="github" target="_blank"><i class="fa fa-github-alt"></i></a></li>
+					<li><a href="http://codepen.io/whalesingswee/" class="codepen" target="_blank"><i class="fa fa-codepen"></i></a></li>
+					<li><a href="http://stackoverflow.com/users/2147483/draftdraft88" class="stack-overflow" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
+					<li><a href="https://tw.linkedin.com/in/hsianglee" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+				</ul>
 			</div>
-		</header>
-	</article>
-	
+		</div>
 
-	<div class="pagination">
-	
-	
-</div>
+		
+		<div class="comments">
+			<a href="javascript:;" class="readmore smallbutton blue"><i class="fa fa-comments"></i>View Comments...</a>
+			<div id="disqus_thread"></div>
+			<div id="g-comments"></div>
+		</div>
+		
+
+	</article>
 
 </section>
+
 
 	<footer>
 	<div class="wrapper">
