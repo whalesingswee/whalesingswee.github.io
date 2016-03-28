@@ -31,11 +31,11 @@ linkedin_url: "https://tw.linkedin.com/in/hsianglee"
 
 
 # Theme Settings
-theme_disqus_shortname: "whalesingswee"
+theme_disqus_shortname: "whalesingsweeco"
 theme_google_comments: false
-theme_analytics_id: ""
+theme_analytics_id: "UA-66913688-1"
 theme_reading_time: true
-theme_autoload_comments: false
+theme_autoload_comments: true
 theme_always_show_nav: false
 
 
