@@ -268,4 +268,7 @@ input:not([type=submit]):not([type=file]):active, input:not([type=submit]):not([
 
 .inline-group {
 	display: flex;
+	li {
+		list-style: none;
+	}
 }
