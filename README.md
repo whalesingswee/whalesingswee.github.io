@@ -1,4 +1,4 @@
-# whalesingswee.co [![website url](https://img.shields.io/badge/website-whalesingswee.co-orange.svg)](http://whalesingwsee.co) 
+# whalesingswee.co [![website url](https://img.shields.io/badge/website-whalesingswee.co-orange.svg)](http://whalesingswee.co) 
 A personal site with stories about web design, front-end development, and apple apps.
 
 ## Installation
