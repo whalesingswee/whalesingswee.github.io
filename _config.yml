@@ -1,5 +1,5 @@
 # External Gems
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
 
 
 # Site Settings
