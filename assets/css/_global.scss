@@ -15,19 +15,19 @@ body, html {
 
 a {
 	font-weight: 600;
-	color: #2E978E;
+	color: #084C61;
 	text-decoration: none;
 	border-bottom: 3px solid transparent;
 
 	@include transition_two(border 0.2s ease-out, color 0.2s ease-out);
 
 	&:hover {
-		color: #2E978E;
+		color: #084C61;
 	}
 }
 
 p a:hover {
-	color: #2E978E;
+	color: #084C61;
 }
 
 h1, h2, h3, h4 {
