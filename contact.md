@@ -6,7 +6,7 @@ comments: false
 ---
 
 我目前提供網站開發諮詢、設計、以及開發等服務，也提供一對一的網頁開發教學，也希望能參與更多 Open Source 等專案、合作製作網站。
-若您有以上的需求，歡迎與我聯絡。
+若您有以上的需求，歡迎與我[聯絡](whalesingswee@gmail.com)。
 
 ## Services
 
